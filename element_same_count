@@ -1,0 +1,43 @@
+import java.util.*;
+class ELEsame
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int[] a=new int[n];
+        int[] f=new int[n];
+        int fl=0;
+        for(int i=0;i<n;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            int c=1;
+            for(int j=i+1;j<n;j++){
+                if(a[i]==a[j])
+                {
+                    c++;
+                    a[j]=0;
+                }
+            }
+            if(a[i]!=0)
+            {
+                f[i]=c;
+            }
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]==f[i] && a[i]!=0)
+            {
+            System.out.print(a[i]+" ");
+            fl=1;
+            }
+        }
+        if(fl==0)
+        {
+            System.out.println(-1);
+        }
+    }
+}
