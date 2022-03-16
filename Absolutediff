@@ -1,0 +1,40 @@
+import java.util.*;
+class Absolutediff
+{
+    static int count(int n)
+    {
+        int c=0;
+        while(n>0)
+        {
+            c++;
+            n=n/10;
+        }
+        return c;
+    }
+    static void diff(int n,int d)
+    {
+        int i=0;
+        int div=1;
+        while(i<d)
+        {
+            div=div*10;
+            i++;
+        }
+        int last=n%div;
+        int len=count(n);
+        while(len!=d)
+        {
+            n=n/10;
+            len--;
+        }
+        int first=n;
+        System.out.println(Math.abs(first-last));
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int d=obj.nextInt();
+        diff(n,d);
+    }
+}
