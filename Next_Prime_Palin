@@ -1,0 +1,56 @@
+import java.util.*;
+class NEXT_primepalin
+{
+    static Boolean isPrime(int num)
+    {
+        if(num==0 ||num==1)
+        {
+            return false;
+        }
+        if(num==2||num==3)
+        {
+            return true;
+        }
+        for(int i=2;i<=num/2;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static Boolean isPalin(int num)
+    {
+        int n=num;
+        int res=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            res=res*10+r;
+            num=num/10;
+        }
+        if(n==res)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        n=n+1;
+        for(int i=n;i>=n;i++)
+        {
+            if(isPrime(i)==true && isPalin(i)==true)
+            {
+                System.out.print(i);
+                break;
+            }
+        }
+    }
+}
