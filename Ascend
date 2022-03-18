@@ -1,0 +1,33 @@
+import java.util.*;
+class Ascend
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int[] a=new int[n];
+        int fl=0;
+        for(int i=0;i<n;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            int j=i+1;
+            if(j<n)
+            {
+                if(a[i]>=a[j])
+                {
+                    fl=1;
+                    System.out.println("no");
+                    break;
+                }
+            }
+        }
+        if(fl==0)
+        {
+            System.out.print("yes");
+        }
+    }
+}
