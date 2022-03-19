@@ -1,0 +1,39 @@
+import java.util.*;
+class eve_odd_mixed
+{
+    static void digit(int num)
+    {
+        int e=0,o=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            if(r%2==0)
+            {
+                e++;
+            }
+            else
+            {
+                o++;
+            }
+            num=num/10;
+        }
+        if(e!=0 && o!=0)
+        {
+            System.out.println("Mixed");
+        }
+        else if(e!=0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        digit(n);
+    }
+}
