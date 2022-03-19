@@ -1,0 +1,35 @@
+import java.util.*;
+class Ugly
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int fl=0;
+        while(n!=1)
+        {
+            if(n%2==0)
+            {
+                n=n/2;
+            }
+            else if(n%3==0)
+            {
+                n=n/3;
+            }
+            else if(n%5==0)
+            {
+                n=n/5;
+            }
+            else
+            {
+                fl=1;
+                System.out.print("Not Ugly Number");
+                break;
+            }
+        }
+        if(fl==0)
+        {
+            System.out.println("Ugly Number");
+        }
+    }
+}
