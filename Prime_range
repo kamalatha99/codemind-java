@@ -1,0 +1,38 @@
+import java.util.*;
+class Prime_range
+{
+    static Boolean isPrime(int num)
+    {
+        if(num==0||num==1)
+        {
+            return false;
+        }
+        if(num==2||num==3)
+        {
+            return true;
+        }
+        for(int i=2;i*i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int m=obj.nextInt();
+        int n=obj.nextInt();
+        int c=0;
+        for(int i=m;i<=n;i++)
+        {
+            if(isPrime(i)==true)
+            {
+                c++;
+            }
+        }
+        System.out.println(c);
+    }
+}
