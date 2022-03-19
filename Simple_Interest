@@ -1,0 +1,13 @@
+import java.util.*;
+class SimpleIntrest
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int p=obj.nextInt();
+        int t=obj.nextInt();
+        int r=obj.nextInt();
+        int si=(p*t*r)/100;
+        System.out.println(si);
+    }
+}
