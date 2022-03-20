@@ -1,0 +1,28 @@
+import java.util.*;
+class Count_Occur
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        String s=obj.nextLine();
+        String search=obj.next();
+        char k=search.charAt(0);
+        int c=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char ch=s.charAt(i);
+            if(ch==k)
+            {
+                c++;
+            }
+        }
+        if(c==0)
+        {
+            System.out.println(-1);
+        }
+        else
+        {
+            System.out.println(c);
+        }
+    }
+}
