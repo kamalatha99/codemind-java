@@ -1,0 +1,11 @@
+import java.util.*;
+class Count_Words
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        String s=obj.nextLine();
+        String arr[]=s.split(" ");
+       System.out.println(arr.length);
+    }
+}
