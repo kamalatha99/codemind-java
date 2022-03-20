@@ -1,0 +1,30 @@
+import java.util.*;
+class Spy
+{
+    static void digit(int num)
+    {
+        int p=1;
+        int s=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            p=p*r;
+            s=s+r;
+            num=num/10;
+        }
+        if(p==s)
+        {
+            System.out.println("Spy Number");
+        }
+        else
+        {
+            System.out.println("Not Spy Number");
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        digit(n);
+    }
+}
