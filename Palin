@@ -1,0 +1,44 @@
+import java.util.*;
+class Palin_negative
+{
+    static Boolean isPalin(int num)
+    {
+        int or=num;
+        int res=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            res=res*10+r;
+            num=num/10;
+        }
+        if(res==or)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(isPalin(a[i])==true)
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
+    }
+}
