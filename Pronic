@@ -1,0 +1,27 @@
+import java.util.*;
+class Pronic
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int fl=0;
+        for(int i=2;i*i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                int t=n/i;
+                if(t-i==1||i-t==1)
+                {
+                    fl=1;
+                    System.out.println("YES");
+                    break;
+                }
+            }
+        }
+        if(fl==0)
+        {
+            System.out.println("NO");
+        }
+    }
+}
