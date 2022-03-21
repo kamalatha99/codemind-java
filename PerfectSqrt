@@ -1,0 +1,24 @@
+import java.util.*;
+class Perfect_sqrt
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int fl=0;
+        for(int i=1;i<=n/2;i++)
+        {
+            if(i*i==n)
+            {
+                fl=1;
+                System.out.println("True");
+                break;
+            }
+        }
+        if(fl==0)
+        {
+        System.out.println("False");
+                
+        }
+    }
+}
