@@ -1,0 +1,30 @@
+import java.util.*;
+class LCM
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        int d=2;
+        int res=1;
+        while(a!=0)
+        {
+            if(a%d==0 && b%d==0)
+            {
+                a=a/d;
+                b=b/d;
+                res=res*d;
+            }
+            else
+            {
+                d++;
+            }
+            if(a<d ||b<d)
+            {
+                break;
+            }
+        }
+        System.out.println(res*a*b);
+    }
+}
