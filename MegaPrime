@@ -1,0 +1,52 @@
+import java.util.*;
+class MegePrime
+{
+    static Boolean digit(int n)
+    {
+        while(n!=0)
+        {
+            int r=n%10;
+            if(isPrime(r)==true)
+            {
+                n=n/10;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static Boolean isPrime(int num)
+    {
+        if(num==0||num==1)
+        {
+            return false;
+        }
+        if(num==2||num==3)
+        {
+            return true;
+        }
+        for(int i=2;i*i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        if(isPrime(n)==true && digit(n)==true)
+        {
+            System.out.println("Mega Prime");
+        }
+        else
+        {
+            System.out.println("Not Mega Prime");
+        }
+    }
+}
