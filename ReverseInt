@@ -1,0 +1,26 @@
+import java.util.*;
+class Rev
+{
+    static void rev(int n)
+    {
+        int or=n;
+        while(n%10==0)
+        {
+            n=n/10;
+        }
+        int res=0;
+        while(n!=0)
+        {
+            int r=n%10;
+            res=res*10+r;
+            n=n/10;
+        }
+        System.out.println(res);
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        rev(n);
+    }
+}
