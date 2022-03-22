@@ -1,0 +1,32 @@
+import java.util.*;
+class Adam_numb
+{
+    static int rev(int num)
+    {
+        int res=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            res=res*10+r;
+            num=num/10;
+        }
+        return res;
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int r=rev(n);
+        int sq=n*n;
+        int rsq=r*r;
+        int revsq=rev(rsq);
+        if(sq==revsq)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
