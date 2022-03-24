@@ -1,0 +1,22 @@
+import java.util.*;
+class Square
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int fl=0;
+        for(int i=1;i*i<=n;i++)
+        {
+            if(i*i==n)
+            {
+                fl=1;
+             System.out.println("True");   
+            }
+        }
+        if(fl==0)
+        {
+            System.out.println("False");
+        }
+    }
+}
