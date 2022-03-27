@@ -1,0 +1,21 @@
+import java.util.*;
+class RotLeft
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int k=obj.nextInt();
+        k=n-k;
+        ArrayList<Integer> al=new ArrayList<Integer>(n);
+        for(int i=0;i<n;i++)
+        {
+            al.add(obj.nextInt());
+        }
+        Collections.rotate(al,k);
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(al.get(i)+" ");
+        }
+    }
+}
