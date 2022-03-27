@@ -1,0 +1,38 @@
+import java.util.*;
+class Eve_digit
+{
+    static Boolean Even(int num)
+    {
+        int d=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            d++;
+            num=num/10;
+        }
+        if(d%2==0)
+        {
+            return true;
+        }
+        return false;
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        int c=0;
+        for(int i=0;i<n;i++)
+        {
+            if(Even(a[i])==true)
+            {
+                c++;
+            }
+        }
+        System.out.println(c);
+    }
+}
