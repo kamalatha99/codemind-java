@@ -1,0 +1,31 @@
+import java.util.*;
+class Max_ele_col
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int m=obj.nextInt();
+        int n=obj.nextInt();
+        int[][] a=new int[m][n];
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                a[i][j]=obj.nextInt();
+            }
+        }
+        int max=0;
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(a[j][i]>max)
+                {
+                    max=a[j][i];
+                }
+            }
+            System.out.println(max);
+            max=0;
+        }
+    }
+}
