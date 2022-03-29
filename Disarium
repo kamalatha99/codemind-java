@@ -1,0 +1,39 @@
+import java.util.*;
+class Disarium
+{
+    static int rev(int num)
+    {
+        int reverse=0;
+        while(num!=0)
+        {
+            int r=num%10;
+            reverse=reverse*10+r;
+            num=num/10;
+        }
+        return reverse;
+    }
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int num=n;
+        double i=1;
+        double sum=0;
+        n=rev(n);
+        while(n!=0)
+        {
+            int r=n%10;
+            sum=sum+Math.pow(r,i);
+            i++;
+            n=n/10;
+        }
+        if(num==(int)sum)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
